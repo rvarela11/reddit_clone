@@ -27,5 +27,5 @@ Styling is not a huge component of this project, but feel free to make your site
 
 ###Super Bonus
 
-Use the actual reddit API for additional functionality!
+Use the actual reddit API for additional functionality! (You'll need to read about the [request](https://www.npmjs.com/package/request) module.)
 
