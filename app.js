@@ -13,15 +13,15 @@ app.use(methodOverride("_method"));
 
 app.get("/", function(req, res){
 	res.render("statics/home")
-})
+});
 
 // Routes
 app.use("/users", usersRouter);
 
 
-app.get("*", function(req,res){
-  res.render("404");
-});
+// app.get("*", function(req,res){
+//   res.render("404");
+// });
 
 app.listen(3000, function(){
   console.log("Server is listening on port 3000");

@@ -6,6 +6,11 @@ router.route("/")
 	// All the posts
 	// .get() 
 
+router.route("/new")
+	.get(function(req, res){
+		res.render("users/new");
+	});
+
 
 
 
