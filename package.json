@@ -4,8 +4,8 @@
   "description": "For this assignment you will need to combine your knowledge of express, SQL and Knex to build a Reddit clone where users can create posts and comment on those posts.",
   "main": "app.js",
   "scripts": {
-    "test": "echo Error: no test specified && exit 1",
-    "start": "node app.js"
+    "test": "NODE_ENV=test mocha",
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -22,11 +22,13 @@
     "ejs": "^2.5.2",
     "express": "^4.14.0",
     "knex": "^0.10.0",
+    "method-override": "^2.3.6",
     "pg": "^4.5.6"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.0.2",
-    "morgan": "^1.7.0"
+    "morgan": "^1.7.0",
+    "supertest": "^2.0.0"
   }
 }

@@ -4,15 +4,27 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: 'postgres://localhost/reddit_clone',
-    degug: true
+    connection: //'postgres://localhost/reddit_clone',
+    {
+      host: 'localhost',
+      database: 'reddit_clone',
+    },
+  },
+
+  test: {
+    client: 'pg',
+    connection: //'postgres//localhost/reddit_clone_test',
+    {
+      host: 'localhost',
+      database: 'test_reddit',
+    }
   },
 
   staging: {
     client: 'postgresql',
     connection: {
       database: 'my_db',
-      user:     'username',
+      user: 'username',
       password: 'password'
     },
     pool: {
@@ -28,7 +40,7 @@ module.exports = {
     client: 'postgresql',
     connection: {
       database: 'my_db',
-      user:     'username',
+      user: 'username',
       password: 'password'
     },
     pool: {

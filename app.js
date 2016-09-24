@@ -1,5 +1,6 @@
 var express = require("express"),
 	app = express(),
+	methodOverride = require("method-override"),
 	port = process.env.PORT || 3000,
 	morgan = require("morgan"),
 	bodyParser = require("body-parser"),
@@ -14,10 +15,7 @@ app.use(morgan("tiny"));
 app.use(bodyParser.urlencoded({
 	extended: true
 }));
-
-// app.get("/", function(req, res) {
-// 	res.render("statics/home");
-// });
+app.use(methodOverride('_method'));
 
 // Routes
 app.use(usersRouter);
@@ -32,4 +30,4 @@ app.listen(port, function() {
 	console.log("Server is listening on port 3000");
 });
 
-// module.exports = apps;
+module.exports = app;

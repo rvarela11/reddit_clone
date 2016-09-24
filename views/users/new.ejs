@@ -2,22 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Users New</title>
+  <title>New User Page</title>
 </head>
 <body>
   <h1> New User Page </h1>
-
-  <form action="/users" method="POST" >
+  <a href="/">Home</a>
+  <p></p>
+  <form action="/new" method="POST" >
   	<label for="userFullName"> Full Name: </label>
   		<input type="text" name="fullName" autofocus required />
       <p></p>
   	<label for="userName"> Username: </label>
-      <input type="text" name="name" required />
+      <input type="text" name="userName" required />
       <p></p>
-    <label for="userImageUrl"> Image Url: </label>
-      <input type="text" name="url" />
-      <p></p>
-      <input type="submit" value="createNewUser"/>
+      <input type="submit" value="Submit"/>
   </form>
 
 </body>

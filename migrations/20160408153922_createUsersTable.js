@@ -1,10 +1,9 @@
-
 exports.up = function(knex, Promise) {
-  return knex.schema.createTable("users", function(table){
-  	table.increments().primary();
-  	table.string("full_name");
-  	table.string("username");
-  	table.text("img_url", "longtext");
+  return knex.schema.createTableIfNotExists("users", function(table) {
+    table.increments().primary();
+    table.string("full_name");
+    table.string("user_name");
+    table.timestamps();
   });
 };
 
