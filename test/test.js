@@ -36,49 +36,50 @@ describe('New User Page', function() {
   });
 });
 
-// describe('Edit Page', function() {
-//   knex.raw('TRUNCATE users cascade;').then(function(err) {});
-//   knex('users').insert({
-//     user_name: 'Ale1'
-//   }).then(function(err) {});
-//   it('should say <h1> Edit Page </h1>', function(done) {
-//     var id = knex.select('id').from('users');
-//     request(app).get("'/' + id + '/edit'").end(function(err, res) {
-//       expect(res.text).to.include('<h1> Edit Page </h1>');
-//       done();
-//     });
-//   });
-//   //   // it('should add an edit a user', function(done) {
-//   //   //   request(app).patch('/6')
-//   //   //     .send({
-//   //   //       user_name: 'AleEDIT'
-//   //   //     })
-//   //   //     .end(function(err, res) {
-//   //   //       request(app).get('/')
-//   //   //         .end(function(err, res) {
-//   //   //           expect(res.text).to.include('AleEDIT');
-//   //   //           done();
-//   //   //         });
-//   //   //     });
-//   //   // });
-// });
+describe('Edit Page', function() {
+  knex.raw('TRUNCATE users cascade;').then(function(err) {});
+  knex('users').insert({
+    id: 1,
+    user_name: 'Ale1'
+  }).then(function(err) {});
+  it('should say <h1> Edit Page </h1>', function(done) {
+    var id = knex.select('id').from('users');
+    request(app).get('/1/edit').end(function(err, res) {
+      expect(res.text).to.include('<h1> Edit Page </h1>');
+      done();
+    });
+  });
+  it('should add an edit a user', function(done) {
+    request(app).patch('/1').type('form')
+      .send({
+        userName: 'AleEDIT'
+      })
+      .end(function(err, res) {
+        request(app).get('/')
+          .end(function(err, res) {
+            expect(res.text).to.include('AleEDIT');
+            done();
+          });
+      });
+  });
+});
 
-// describe('Delete Page', function() {
-//   knex.raw('TRUNCATE users cascade;').then(function(err) {});
-//   knex('users').insert({
-//     id: 1,
-//     user_name: 'AleDelete'
-//   }).then(function(err) {});
-//   it('should delete a user', function(done) {
-//     // var user = knex('users').where({
-//     //   user_name: 'AleDelete'
-//     // }).select('id').then(function(err) {});
-//     request(app).delete('/1').type('form').end(function(err, res) {
-//       request(app).get('/')
-//         .end(function(err, res) {
-//           expect(res.text).to.not.include(res.body.id);
-//           done();
-//         });
-//     });
-//   });
-// });
+describe('Delete Page', function() {
+  // knex.raw('TRUNCATE users cascade;').then(function(err) {});
+  knex('users').insert({
+    id: 2,
+    user_name: 'AleDelete'
+  }).then(function(err) {});
+  it('should delete a user', function(done) {
+    // var user = knex('users').where({
+    //   user_name: 'AleDelete'
+    // }).select('id').then(function(err) {});
+    request(app).delete('/2').type('form').end(function(err, res) {
+      request(app).get('/')
+        .end(function(err, res) {
+          expect(200);
+          done();
+        });
+    });
+  });
+});
