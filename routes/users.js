@@ -40,6 +40,7 @@ router.get('/:id/edit', function(req, res) {
 });
 
 router.post('/new', function(req, res) {
+	console.log(req.body.fullName);
 	knex('users').insert({
 		full_name: req.body.fullName,
 		user_name: req.body.userName,
