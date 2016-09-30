@@ -71,9 +71,9 @@ describe('Delete Page', function() {
     user_name: 'AleDelete'
   }).then(function(err) {});
   it('should delete a user', function(done) {
-    // var user = knex('users').where({
-    //   user_name: 'AleDelete'
-    // }).select('id').then(function(err) {});
+    var user = knex('users').where({
+      user_name: 'AleDelete'
+    }).select('id').then(function(err) {});
     request(app).delete('/2').type('form').end(function(err, res) {
       request(app).get('/')
         .end(function(err, res) {
