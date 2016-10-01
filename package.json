@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gSchool/reddit_clone_knex.git"
+    "url": "git+https://github.com/gSchool/reddit_clone.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gSchool/reddit_clone_knex/issues"
+    "url": "https://github.com/gSchool/reddit_clone/issues"
   },
-  "homepage": "https://github.com/gSchool/reddit_clone_knex#readme",
+  "homepage": "https://github.com/gSchool/reddit_clone#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
     "ejs": "^2.5.2",
