@@ -1,0 +1,24 @@
+
+
+/*-------------------- POST-Single-Thread --------------------*/
+.postContainerTop {
+  display: flex;
+}
+
+.postContainerTop a{
+  margin-right: 1em;
+}
+
+.postContainer {
+  border: 1px solid #000;
+}
+
+.postTitle {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.postBody {
+  font-size: 16px;
+  font-weight: normal;
+}

@@ -1,22 +1,19 @@
 {
-  "name": "reddit_clone_knex",
+  "name": "reddit_clone",
   "version": "1.0.0",
-  "description": "For this assignment you will need to combine your knowledge of express, SQL and Knex to build a Reddit clone where users can create posts and comment on those posts.",
+  "description": "Create a Reddit clone",
   "main": "app.js",
   "scripts": {
     "test": "NODE_ENV=test mocha",
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gSchool/reddit_clone.git"
+    "url": "https://github.com/rvarela11/reddit_clone"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/gSchool/reddit_clone/issues"
-  },
-  "homepage": "https://github.com/gSchool/reddit_clone#readme",
+  "homepage": "https://github.com/rvarela11/reddit_clone#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
     "ejs": "^2.5.2",

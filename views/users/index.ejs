@@ -13,6 +13,7 @@
     <thead>
       <th> ID </th>
       <th> Username </th>
+      <th> New Post </th>
       <th> Show Posts </th>
       <th> Edit User </th>
       <th> Delete User </th>
@@ -22,6 +23,7 @@
         <tr>
           <td> <%= user.id %> </td>
           <td> <%= user.user_name %> </td>
+          <td> <a href= <%= "/users/" + user.id + "/posts/new" %>> New Post </a></td>
           <td> <a href= <%= "/users/" + user.id + "/posts" %>> Posts </a></td>
           <td> <a href= <%= "/" + user.id + "/edit"%>> Edit </a></td>
           <td>
