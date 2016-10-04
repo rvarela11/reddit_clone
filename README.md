@@ -10,11 +10,10 @@ Technologies used:
 6. Behavior Testing
 
 Current:
-1. Full Restful API on the users
+1. Full Restful API on the users and posts routes
 
 Need to:
-1. Create a full CRUD with posts
-2. Create a full CRUD with comments
-3. Add CSS
+1. Create a full CRUD with comments
+2. Add CSS
 
 Users should be able to write many posts and each post can have multiple comments. 
